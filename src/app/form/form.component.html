@@ -1,0 +1,47 @@
+<button type="button" class="btn btn-secondary" id="newButton">New report</button>
+
+    <form id="addForm" class="border border-secondary" [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+        <h3>New Report</h3>
+        
+        <div class="mb-3">
+            <label for="newLocation" class="form-label" >Location</label>
+            <select id="loc" (change)="onChange($event)">
+                <option selected id="createNew" value="new">Create New Location</option>
+                <option  *ngFor="let opt of dropdown" [value]="opt">{{opt}}</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="newLocation" class="form-label" >Location Name</label>
+            <input type="text" class="form-control" id="newLocation" required formControlName = "location">
+        </div>
+        
+        <div class="mb-3">
+            <label for="newPerson" class="form-label" >Reporter name</label>
+            <input type="text" class="form-control" id="newPerson"  required formControlName = "name">
+        </div>
+
+        <div class="mb-3">
+            <label for="newPhone" class="form-label" >Phone number</label>
+            <input type="tel" class="form-control" id="newPhone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required formControlName = "phone">
+        </div>
+        
+        <div class="mb-3">
+            <label for="newDate" class="form-label" >Date of Visit</label>
+            <input type="date" class="form-control" id="newDate" required formControlName = "date">
+        </div>
+
+        <div class="mb-3">
+            <label for="newTime" class="form-label" >Time of Visit</label>
+            <input type="time" class="form-control" id="newTime" required formControlName = "time">
+        </div>
+        
+        
+
+        <div class="mb-3 mt-3">
+            <label id="newExtra" class="form-label" >Extra notes</label>
+            <input type="text" class="form-control" id="newExtra" formControlName = "note">
+        </div>
+    
+        <button type="submit" class="btn btn-primary" id="submitButton">Submit report</button>
+    </form>

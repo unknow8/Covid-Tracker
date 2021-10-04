@@ -1,0 +1,60 @@
+<app-map></app-map>
+<div class="mainTable">
+    <table class="table table-striped table-hover table-bordered border-secondary" id="dataTable" >
+        <thead>
+            <tr>
+                <th scope="col"><strong>Name</strong></th>
+                <th scope="col"><strong>Person Reported</strong></th>
+                <th scope="col"><strong>Date of visit</strong></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+
+<div id="detailTable">
+    <table class="table table-sm table-striped table-hover table-bordered border-secondary table-responsive-sm" id="dtable" >
+        <tbody>
+          <tr>
+            <th scope="col" style="width:50%"><strong>Location</strong></th>
+            <td scope="col" id="detailLocation" style="width:50%"></td>
+          </tr>
+          <tr>
+            <th scope="row"><strong>Latitude</strong></th>
+            <td id="detailLat"></td>
+          </tr>
+          <tr>
+            <th scope="row"><strong>Longitude</strong></th>
+            <td id="detailLong"></td>
+          </tr>
+          <tr>
+            <th scope="row"><strong>Reporter</strong></th>
+            <td id="detailPerson"></td>
+          </tr>
+          <tr>
+            <th scope="row"><strong>Phone number</strong></th>
+            <td id="detailPhone"></td>
+          </tr>
+          <tr>
+            <th scope="row"><strong>Date</strong></th>
+            <td id="detailDate"></td>
+          </tr>
+          <tr>
+            <th scope="row"><strong>Time</strong></th>
+            <td id="detailTime"></td>
+          </tr>
+          <tr>
+            <th scope="row" id="A1T"><strong>Extra notes</strong></th>
+            <td id="detailNote"></td>
+          </tr>
+        </tbody>
+      </table>
+      <button type="button" class="btn btn-secondary" id="HideButton">Hide Detail</button>
+    </div>
+
+
+<app-form (myEvent)="getData($event)" > </app-form>

@@ -1,0 +1,13 @@
+.mainTable{
+    width:50%;
+}
+th{
+    width: 20%;
+}
+#detailTable{
+    width: 10%;
+    position: absolute;
+    /* top: 0px; */
+    left: 51%;
+    top: 55%;
+}

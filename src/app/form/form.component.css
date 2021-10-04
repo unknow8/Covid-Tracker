@@ -1,0 +1,14 @@
+#newButton{
+    margin-left: 2%;
+    width: 47%;
+}
+
+#addForm{
+    margin-left: 2%;
+    margin-top: 2%;
+    width: 25%;
+    padding: 10px;
+    position:absolute;
+    right:2%;
+    top:0px;
+}
